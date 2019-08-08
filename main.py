@@ -30,7 +30,7 @@ numbers1 = [(all_primes.index(prime), mapped) if prime is not 1 else ('s', False
 numbers2 = [(all_primes.index(prime), mapped) if prime is not 1 else ('s', False) for prime, mapped in primes2]
 
 # Identify only unambiguous atom-atom mappings
-mapping = {i: primes2.index((prime, mapped)) for i, (prime, mapped) in enumerate(primes1) if mapped}
+mapping = {i: primes2.index((prime, mapped)) for i, (prime, mapped) in enumerate(primes1) if mapped and prime != 1}
 print('Mapping:')
 print(mapping)
 
